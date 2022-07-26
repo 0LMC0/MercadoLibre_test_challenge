@@ -1,0 +1,53 @@
+$primary: #333333;
+$secondary: #999999;
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .item{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items:flex-start;
+            .heroImg{
+                width: 180px;
+                height: 180px;
+                border-radius: 4px;
+                margin: 16px;
+            }
+            .infoItem{
+            margin-top: 30px;
+            width: 70%;
+                .pricing{
+                    align-items: center;
+                    display: flex;
+                    h2{
+                        color: $primary;
+                        font-size: 24px;
+                        font-weight: 300;
+                        margin-right: 10px;
+                    }
+                }
+                .nameItem{
+                    color: $secondary;
+                    font-size: 18px;
+                    margin-top: 32px;
+                    max-width: 60%;
+                }
+        }
+        .city{
+            text-align: start;
+            color: $secondary;
+            width: 75px;
+            margin: 32px 32px 0 0;
+            font-size: 12px;
+        }
+        }
+        hr {
+            align-self: center;
+            width: 90%;
+            border: 2px solid #eeeeee;
+            border-radius: 4px;
+        }
+}

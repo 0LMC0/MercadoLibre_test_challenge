@@ -1,0 +1,13 @@
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .base{
+        width: 80%;
+        .noProductFound{
+            text-align: center;
+            margin-top: 100px;
+            font-size: 30px;
+        }
+    }
+}

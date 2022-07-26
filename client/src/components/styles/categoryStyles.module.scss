@@ -1,0 +1,16 @@
+.container{
+    align-content: start;
+    display: flex;
+    justify-content: start;
+    padding: 16px 0;
+    font-size: 13px;
+    color: #999999;
+        .listItem{
+        display: flex;
+        margin-right: 10px;
+        .arrow{
+            font-weight: 900;
+            margin-right: 5px;
+        }
+        }
+}

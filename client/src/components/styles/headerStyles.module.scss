@@ -1,0 +1,59 @@
+// Solo la importo de vuelta aca para darle estilos al placeholder
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+// fonts
+$primaryFont:'Montserrat', sans-serif;;
+
+$primaryColor: #ffe600;
+$secondaryColor: #333333;
+$thirdColor: #999999;
+$fourthColor: #eeeeee;
+
+
+.headerML{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: $primaryColor;
+    padding: 10px;
+    align-content: center;
+    .searchML{
+        display: flex;
+        margin-left: 20px;
+        align-content: center;
+        align-items: center;
+        width: 75%;
+        .inputML{ 
+            padding: 8px;
+            width: 100%;
+            border: none;
+            outline:none;
+            border-radius: 5px 0 0 5px;
+            font-size: 18px;
+            color: $secondaryColor;
+            font-family: $primaryFont;
+        }   
+           ::placeholder {
+                color:  $thirdColor;
+                font-family: $primaryFont;
+                &:active{
+                    display: none;
+                }
+            } 
+
+        .searchButton{
+            &:hover{
+                background-color: $thirdColor;
+            }
+            &:active {
+                transform: scale(0.97);
+                transition-timing-function: cubic-bezier(.5, 0, .5, 1);
+              }
+            background-color: $fourthColor;
+            padding: 8px;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            margin: auto;
+        }
+    }
+
+}

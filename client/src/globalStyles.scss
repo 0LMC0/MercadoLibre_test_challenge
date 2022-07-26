@@ -1,0 +1,31 @@
+// Aca en realidad quise importar la verdadera fuente que es Proxima Nova, pero es paga jajaj asi que importe una parecida que es la monserat.
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+$primary: #ffe600;
+$secondary: #333333;
+$third: #666666;
+$fourth: #999999;
+$fifth: #eeeeee;
+// fonts
+$primaryFont:'Montserrat', sans-serif;;
+
+
+a{
+    text-decoration: none;
+    outline:none !important;
+    &hover{
+        text-decoration: none;
+    }    
+    &active{
+        text-decoration: none;
+    }
+    &visited{
+        text-decoration: none;
+    }
+}
+
+body{
+    background-color: $fifth;
+    font-family: $primaryFont;
+}
