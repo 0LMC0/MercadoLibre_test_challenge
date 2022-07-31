@@ -8,6 +8,9 @@ React.js - Front
 
 Node.js (express.js)- Back 
 
+## Vista del proyecto
+
+-http://Deploy en curso...
 
 
 ## Descripcion general
@@ -32,7 +35,7 @@ Consultar al Back para que traiga info de una API y mostrarla en los productos y
 
 ## Demostracion
 
-![](https://github.com/0LMC0/MercadoLibre_test_challenge/blob/'main'/demostracion.gif)
+![](https://github.com/0LMC0/MercadoLibre_test_challenge/blob/main/demostracion.gif)
 
 ## Ejecucion
 
