@@ -1,5 +1,6 @@
 // MODULED SCSS STYLES
 import axios from "axios";
+import { useEffect } from "react";
 import { useState } from "react";
 import Category from "../../category/category";
 import detailStyles from "../../styles/detailStyles.module.scss";
@@ -9,9 +10,16 @@ const Detail = ( {Producto, precio} ) => {
 
   const [Categorias, setCategorias] = useState([])
 
+  console.log(Categorias)
+ 
+  useEffect(() => {
+    
     axios
     .get(`https://api.mercadolibre.com/categories/${Producto.category_id}`)
     .then(res => { setCategorias(res.data.path_from_root);})
+  
+  }, [Producto])
+  
 
   return (
     <>

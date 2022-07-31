@@ -9,17 +9,22 @@ import headerStyles from "../styles/headerStyles.module.scss"
 
 const Header = () => {
   const navigate = useNavigate();
-  const [q, setq] = useState('');
+  const [search, setSearch] = useState("");
+
+  console.log(search)
 
   const goToMain = () =>
     navigate({
       pathname: '/items',
-      search: createSearchParams({q}).toString()
+      search: createSearchParams({search}).toString()
     });
 
-    
+  const handleChange = (e) =>{
+    setSearch(e.target.value)
+  }
+  
   const handleSubmit = (e) => {
-    setq(e.target.value)
+    e.preventDefault()
     goToMain();
   }
 
@@ -29,15 +34,15 @@ const Header = () => {
       <Link to={'/'}>
         <img src={ Logo_ML } alt="imageNotFound" />
       </Link>
-            <div className={headerStyles.searchML}>
+            <form onSubmit={ handleSubmit } className={headerStyles.searchML}>
                <input 
                className={headerStyles.inputML}
                type="text"
-               value={q}
+               value={ search }
                placeholder="Nunca dejes de buscar"
-               onChange = {handleSubmit}/>
-               <button className={headerStyles.searchButton} ><img src={ ic_Search } alt="imageNotFound" /></button>
-            </div>
+               onChange = {handleChange}/>
+               <button type='submit' className={headerStyles.searchButton} ><img src={ ic_Search } alt="imageNotFound" /></button>
+            </form>
      </header>
      
      </>

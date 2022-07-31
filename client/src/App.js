@@ -9,16 +9,12 @@ import Header from './components/header/header';
 import "./globalStyles.scss";
 
 
-
-
-
-
 function App() {
   return (
     <div>
         <Ruta>
           <Header />
-              <Routes>                
+              <Routes>           
                 <Route exact path='/items' element={<Main/>}/>
                 <Route exact path='/items/:Id' element={<ItemDetailContainer />}/>
               </Routes> 

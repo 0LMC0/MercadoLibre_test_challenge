@@ -16,8 +16,6 @@ const Main = () => {
   const searchData = location.search;
   // seteo los productos
   const [Products, setProducts] = useState([]);
-  // corto array en 4 objetos
-  const productsSlice = Products.slice(0,4);
   // seteo categorias
   const [categories, setCategories] = useState([])
  
@@ -44,7 +42,7 @@ return (
       <div className={mainStyles.container}>
         <div className={mainStyles.base}>
           {/*mando categorias y productos */}
-            {Products == 0 ? <p className={mainStyles.noProductFound}> Ningún elemento coincide con el criterio de búsqueda</p> : <ItemList prods={productsSlice} categorias={ categories } /> }
+            {Products.length === 0 ? <p className={mainStyles.noProductFound}> Ningún elemento coincide con el criterio de búsqueda</p> : <ItemList prods={Products} categorias={ categories } /> }
         </div>
       </div>
   )

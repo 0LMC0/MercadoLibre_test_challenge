@@ -1,19 +1,11 @@
 const express = require('express');
 const app = express();
-const axios = require("axios")
+const axios = require("axios");
+var cors = require('cors');
 
 
-
-// // deploy en proceso
-// const path = require('path')
-const port = process.env.PORT || 5000;
-
-// if (process.env.NODE_ENV === "production") {
-//   app.use(express.static('../client/build'));
-//   app.get('*', (req, res) => {
-//     req.sendFile(path.resolve(__dirname, '../client/build', 'index.html'))
-//   })
-// }
+// cross origin middleware
+app.use(cors())
 
 //////////////////////////////////
 ////////     QUERY    ///////////
@@ -21,7 +13,7 @@ const port = process.env.PORT || 5000;
 
 app.get("/api/items", async (req, res) => {
   // query 
-  const query = req.query.q
+  const query = req.query.search
   
   //variable que guarda el URL
   let i = `https://api.mercadolibre.com/sites/MLA/search?q=${query}`;
@@ -30,7 +22,7 @@ app.get("/api/items", async (req, res) => {
   axios
   .get(i)
   .then((resp) => {
-    let items = resp.data.results;
+    let items = resp.data.results.slice(0, 4);
     let cat = resp.data.filters;
 
     // se guarda en esta variable
@@ -137,4 +129,4 @@ app.get("/api/items/:id", async (req, res) => {
 
 
 // inicio del servidor en el puerto 5000/api
-app.listen(port, () => console.log("server running on port: " + port))
+app.listen(5000, () => console.log("server running on port: 5000"))
