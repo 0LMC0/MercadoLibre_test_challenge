@@ -33,10 +33,6 @@ Consultar al Back para que traiga info de una API y mostrarla en los productos y
 
 -Axios
 
-## Demostracion
-
-![](https://github.com/0LMC0/MercadoLibre_test_challenge/blob/main/demostracion.gif)
-
 ## Ejecucion
 
 Clon = https://github.com/0LMC0/MercadoLibre_test_challenge.git
